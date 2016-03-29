@@ -23,9 +23,12 @@ Return JSON
 }
 ```
 
-## Aditional Features
+## Additional Features
 
 Link click count can be found by adding `/info` to the shortened URL. 
 
 http://www.example.com/BBSRH34/info
 
+## TODO
+
+* css
