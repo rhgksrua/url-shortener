@@ -8,6 +8,7 @@ var saveAndGenerate = require('../helpers/saveAndGenerate');
 var Url = require('../models/Url');
 
 router.get('/', indexController);
+
 router.get('/new', indexController);
 
 router.get('/new/*', shortController);
