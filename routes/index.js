@@ -6,11 +6,10 @@ var router = express.Router();
 var Url = require('../models/Url');
 router.get('/', indexController);
 router.get('/:short', redirectController);
-router.get('/:short/count', urlInfoController);
+router.get('/:short/info', urlInfoController);
 
 function indexController(req, res) {
     res.render('index', {host: req.hostname});
-    
 }
 
 /**
@@ -23,12 +22,15 @@ function indexController(req, res) {
  * @return response
  */
 function redirectController(req, res) {
-    
+    if (req.params.short === 'favicon.ico') {
+        return res.sendStatus(200);
+    }
     // updates model and redirect users
     Url.findOneAndUpdate({short: req.params.short}, {$inc: {count: 1}}, function(err, url) {
         if (err) {
             return res.json({error: 'db error'});
         }
+        console.log(url);
         return res.redirect(url.original_url);
     });
 }

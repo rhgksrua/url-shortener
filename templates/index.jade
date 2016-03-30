@@ -3,14 +3,16 @@ html(lang="en")
     head
         meta(name="viewport", content="width=device-width", initial-scale=1)
         link(rel="stylesheet", href="/main.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     body
         h1 url shortener microservice
         article
             h3 Usage 
-            p.code #{host}/api/new/http://www.example.com
+            p 
+                code #{host}/api/new/http://www.example.com
         article
             h3 Output
-            p.code { "origianl_url": http://www.example.com, "short_url": #{host}/Awei32l }
+            pre { #[br]&nbsp;   "origianl_url": http://www.example.com, #[br]&nbsp;   "short_url": #{host}/Awei32l #[br]}
         article
             h3 Redirecting
-            p #{host}/Awei32l will redirect to www.example.com
+            p #{host}/Awei32l will redirect to #[code www.example.com]
