@@ -8,7 +8,8 @@ var api = require('./routes/api');
 var app = express();
 
 var port = process.env.PORT || 8000;
-var MONGO_URI = process.env.IP + "/urlshorten";
+
+var MONGO_URI = process.env.MONGOLAB_URI || process.env.IP + "/urlshorten";
 
 app.use(morgan('combined'));
 
