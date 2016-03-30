@@ -1,7 +1,5 @@
 # url shortener microservice
 
-Shorten URLs
-
 ## Getting started
 
 * clone this repo
@@ -10,7 +8,7 @@ Shorten URLs
 
 ## Usage
 
-http://www.example.com/api/new/http://www.google.com
+`http://www.example.com/api/new/http://www.google.com`
 
 ### Output
 
@@ -27,8 +25,5 @@ Return JSON
 
 Link click count can be found by adding `/info` to the shortened URL. i.e. `http://www.example.com/BBSRH34/info`
 
-http://www.example.com/BBSRH34/info
 
-## TODO
-
-* css
+[DEMO](urlshortenerhank.herokuapp.com)
